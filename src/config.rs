@@ -2850,6 +2850,10 @@ pub fn allow_insecure_tls_fallback() -> bool {
 pub mod keys {
     // Only the keys hbb_common itself references.
     pub const OPTION_COLLAPSE_TOOLBAR: &str = "collapse_toolbar";
+    // Accept UAC consent prompts on the host automatically (no controller
+    // action). Read by the Windows service, which lives in the main crate
+    // but addresses this module via `hbb_common::config::keys`.
+    pub const OPTION_AUTO_ACCEPT_UAC: &str = "auto-accept-uac";
     pub const OPTION_ZOOM_CURSOR: &str = "zoom-cursor";
     pub const OPTION_ENABLE_FILE_COPY_PASTE: &str = "enable-file-copy-paste";
     pub const OPTION_I444: &str = "i444";
